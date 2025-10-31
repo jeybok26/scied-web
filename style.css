@@ -48,7 +48,7 @@ animation: zoomHeader 7s ease-in-out infinite alternate;
     background-size: 150%;
   }
   to {
-    background-size: 250%;
+    background-size: 300%;
   }
 }
 
@@ -235,6 +235,7 @@ footer {
 .hamburger span {
   transition: all 0.3s ease;
 }
+
 
 
 
