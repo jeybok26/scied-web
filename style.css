@@ -63,7 +63,49 @@ header p {
   font-size: 1.2em;
 }
 
+/* ===== Responsive Header ===== */
+@media (max-width: 1024px) {
+  header {
+    padding: 80px 15px;
+    background-attachment: scroll; /* prevents fixed image issues on mobile */
+  }
 
+  header h1 {
+    font-size: 2.2em;
+  }
+
+  header p {
+    font-size: 1.1em;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 60px 15px;
+  }
+
+  header h1 {
+    font-size: 1.8em;
+  }
+
+  header p {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 50px 10px;
+  }
+
+  header h1 {
+    font-size: 1.5em;
+  }
+
+  header p {
+    font-size: 0.9em;
+  }
+}
 
 
 /* ===== NAVIGATION BAR ===== */
@@ -235,6 +277,7 @@ footer {
 .hamburger span {
   transition: all 0.3s ease;
 }
+
 
 
 
