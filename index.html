@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Science Education in the Philippines</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>Science Education in the Philippines</h1>
+    <p><em>Empowering Young Minds Through Discovery and Innovation</em></p>
+  </header>
+
+  <!-- NAVIGATION -->
+  <nav>
+  <div class="logo">Science PH</div>
+  <ul id="nav-links">
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#goals">Goals</a></li>
+    <li><a href="#curriculum">Curriculum</a></li>
+    <li><a href="#achievements">Achievements</a></li>
+    <li><a href="#challenges">Challenges</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#resources">Resources</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</nav>
+
+  <!-- OVERVIEW -->
+  <section id="overview">
+    <h2>Overview</h2>
+    <p>Science education in the Philippines plays a crucial role in building a scientifically literate and innovative society. It helps students develop curiosity, problem-solving skills, and a deeper understanding of the world around them. Guided by institutions such as the Department of Education (DepEd), Commission on Higher Education (CHED), and the Department of Science and Technology (DOST), the country continuously improves its science curriculum, teacher training, and facilities to meet global standards.</p>
+  </section>
+
+  <!-- GOALS -->
+  <section id="goals">
+    <h2>Goals and Objectives</h2>
+    <ul>
+      <li>Develop scientific literacy among learners.</li>
+      <li>Encourage curiosity, exploration, and innovation.</li>
+      <li>Strengthen problem-solving and critical-thinking skills.</li>
+      <li>Inspire students to pursue careers in science, technology, and research.</li>
+      <li>Contribute to national progress through science-based solutions.</li>
+    </ul>
+  </section>
+
+  <!-- CURRICULUM -->
+  <section id="curriculum">
+    <h2>Curriculum and Programs</h2>
+    <p><strong>Basic Education (K–12):</strong> Focuses on understanding natural phenomena and applying science in daily life. Senior High School offers specialized tracks such as STEM (Science, Technology, Engineering, and Mathematics).</p>
+    <p><strong>Higher Education:</strong> Universities and colleges offer degree programs in Biology, Physics, Chemistry, Environmental Science, and more.</p>
+    <p><strong>Special Programs:</strong></p>
+    <ul>
+      <li>STE (Science, Technology, and Engineering) Program</li>
+      <li>SSES (Special Science Elementary Schools)</li>
+      <li>Philippine Science High Schools (PSHS & RSHS)</li>
+      <li>DOST-SEI Scholarships</li>
+    </ul>
+  </section>
+
+  <!-- ACHIEVEMENTS -->
+  <section id="achievements">
+    <h2>Achievements and Innovations</h2>
+    <p>Filipino students and researchers continue to make their mark in science and innovation. Students regularly win awards in international science fairs and Olympiads. Filipino scientists contribute to research in health, agriculture, and technology. Local innovations, like disaster-resilient technologies and eco-friendly inventions, show how science can create positive change in society.</p>
+  </section>
+
+  <!-- CHALLENGES -->
+  <section id="challenges">
+    <h2>Challenges and Future Directions</h2>
+    <ul>
+      <li>Limited laboratory equipment in public schools.</li>
+      <li>Need for continuous teacher training and updated materials.</li>
+      <li>Unequal access to technology and internet connectivity.</li>
+    </ul>
+    <p>To address these, the government promotes STEM programs, enhances teacher skills, and supports research initiatives. The future of science education aims to be more inclusive, digital, and research-driven.</p>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery">
+      <img src="images/science1.jpeg" alt="Science Activity 1">
+      <img src="images/science2.jpeg" alt="Science Activity 2">
+      <img src="images/science3.jpeg" alt="Science Activity 3">
+    </div>
+  </section>
+
+  <!-- RESOURCES -->
+  <section id="resources">
+    <h2>Resources and Downloads</h2>
+    <p>Here are some useful references you can explore and download:</p>
+    <ul>
+      <li>K–12 Science Curriculum Guide (DepEd)</li>
+      <li>MATATAG CURRICULUM Science Grade 4 and 7 (DepEd)</li>
+      <li>DOST-SEI Scholarship Information</li>
+      <li>CHED Science and Technology Program List</li>
+      <li><a href="https://www.ijsr.net/"target="_blank" rel="noopener noreferrer">Science Research Articles and Journals</a></li>
+    </ul>
+    <a href="files/Science Education Programs.zip" class="btn-download" download>📄 Download All PDF Resources</a>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Contact / Feedback</h2>
+    <p>We’d love to hear from you! If you have questions or comments about this project, feel free to reach out.</p>
+    <p><strong>Project by:</strong> JEYYAR B. BOKO</p>
+    <p><strong>Purpose:</strong> A web interface project showcasing Science Education in the Philippines.</p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Science Education in the Philippines | Designed for Educational Purposes By JEYYAR B. BOKO</p>
+  </footer>
+
+  <!-- DOWNLOAD FUNCTION -->
+  <script>
+    // Example function if you want dynamic download via JavaScript
+    function downloadPDF() {
+      const filePath = 'yourfile.pdf'; // Replace with your actual file name in the same folder
+      const link = document.createElement('a');
+      link.href = filePath;
+      link.download = filePath.split('/').pop();
+      link.click();
+    }
+  </script>
+
+  <script>
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
+  const navItems = document.querySelectorAll('#nav-links li a');
+
+  // Toggle menu open/close on hamburger click
+  hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+  hamburger.classList.toggle('active'); // toggle hamburger animation
+});
+
+
+  // Close menu after selecting a link
+  navItems.forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('active');
+    });
+  });
+
+
+</script>
+
+
+</body>
+</html>

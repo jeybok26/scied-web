@@ -1,0 +1,234 @@
+/* ===== GLOBAL STYLES ===== */
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f9ff;
+  color: #222;
+  scroll-behavior: smooth;
+}
+
+h1 {
+  font-weight: 600;
+  color: #f8faf8;
+}
+
+h2 {
+  font-weight: 600;
+  color: #004aad;
+}
+p {
+  line-height: 1.7;
+}
+
+ul {
+  list-style-type: square;
+  padding-left: 30px;
+}
+
+/* ===== HEADER ===== */
+header {
+  background: linear-gradient(
+      rgba(0, 0, 50, 0.6),
+      rgba(0, 0, 50, 0.6)
+    ),
+    url("images/header-bg.jpg") center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+  background-attachment: fixed; /* keeps the image in place while scrolling */
+
+  background-size: cover;
+animation: zoomHeader 15s ease-in-out infinite alternate;
+
+}
+
+@keyframes zoomHeader {
+  from {
+    background-size: 200%;
+  }
+  to {
+    background-size: 350%;
+  }
+}
+
+
+header h1 {
+  margin-bottom: 10px;
+  font-size: 2.5em;
+}
+
+header p {
+  font-style: italic;
+  font-size: 1.2em;
+}
+
+
+
+
+/* ===== NAVIGATION BAR ===== */
+nav {
+  background-color: #003580;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav .logo {
+  color: white;
+  font-size: 1.2em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* ===== HAMBURGER MENU ===== */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background: white;
+  margin-bottom: 4px;
+  border-radius: 3px;
+}
+
+/* ===== SECTIONS ===== */
+section {
+  padding: 50px 10%;
+  background-color: white;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+section h2 {
+  border-left: 5px solid #004aad;
+  padding-left: 10px;
+  margin-bottom: 15px;
+}
+
+/* ===== DOWNLOAD BUTTON ===== */
+.btn-download {
+  display: inline-block;
+  background-color: #004aad;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.btn-download:hover {
+  background-color: #0078ff;
+}
+
+/* ===== GALLERY ===== */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.gallery img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background-color: #003580;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+  margin-top: 40px;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 900px) {
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    background-color: #003580;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+  }
+
+  nav ul.active {
+    max-height: 500px; /* enough to show all links */
+    padding: 10px 0;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  section {
+    padding: 30px 5%;
+  }
+
+  header h1 {
+    font-size: 1.8em;
+  }
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+.hamburger span {
+  transition: all 0.3s ease;
+}
+
+
