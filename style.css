@@ -39,7 +39,7 @@ header {
   background-attachment: fixed; /* keeps the image in place while scrolling */
 
   background-size: cover;
-animation: zoomHeader 15s ease-in-out infinite alternate;
+animation: zoomHeader 7s ease-in-out infinite alternate;
 
 }
 
@@ -235,6 +235,7 @@ footer {
 .hamburger span {
   transition: all 0.3s ease;
 }
+
 
 
 
