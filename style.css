@@ -105,6 +105,11 @@ nav ul li a:hover {
   text-decoration: underline;
 }
 
+/* Smooth scrolling behavior for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
 /* ===== HAMBURGER MENU ===== */
 .hamburger {
   display: none;
@@ -230,5 +235,6 @@ footer {
 .hamburger span {
   transition: all 0.3s ease;
 }
+
 
 
