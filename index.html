@@ -142,16 +142,27 @@
   const navLinks = document.getElementById('nav-links');
   const navItems = document.querySelectorAll('#nav-links li a');
 
-  // Toggle menu open/close on hamburger click
+  // Toggle mobile menu open/close
   hamburger.addEventListener('click', () => {
   navLinks.classList.toggle('active');
   hamburger.classList.toggle('active'); // toggle hamburger animation
 });
 
 
-  // Close menu after selecting a link
+  // Smooth scroll & close menu after clicking a link
   navItems.forEach(link => {
-    link.addEventListener('click', () => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const targetId = link.getAttribute('href');
+      const targetElement = document.querySelector(targetId);
+
+      if (targetElement) {
+        window.scrollTo({
+          top: targetElement.offsetTop - 60, // adjust offset for header height
+          behavior: 'smooth'
+        })
+      }
+      // Close the mobile menu after clicking
       navLinks.classList.remove('active');
     });
   });
@@ -162,5 +173,6 @@
 
 </body>
 </html>
+
 
 
